@@ -1,0 +1,94 @@
+﻿@model Ejjada.Models.Why
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Why</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyTitle1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyTitle1)
+            @Html.ValidationMessageFor(model => model.WhyTitle1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyBody1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyBody1)
+            @Html.ValidationMessageFor(model => model.WhyBody1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyTitle2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyTitle2)
+            @Html.ValidationMessageFor(model => model.WhyTitle2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyBody2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyBody2)
+            @Html.ValidationMessageFor(model => model.WhyBody2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyTitle3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyTitle3)
+            @Html.ValidationMessageFor(model => model.WhyTitle3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyBody3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyBody3)
+            @Html.ValidationMessageFor(model => model.WhyBody3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyTitle4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyTitle4)
+            @Html.ValidationMessageFor(model => model.WhyTitle4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyBody4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyBody4)
+            @Html.ValidationMessageFor(model => model.WhyBody4)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

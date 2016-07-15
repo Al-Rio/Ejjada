@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+@section scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+<section class="action-area-mini">
+    <div class="container">
+        <h1>&nbsp;</h1>
+    </div>
+</section>
+<div id='map-canvas' style="height:350px;"></div>
+<div class="white-wrap">
+    <!--**************************Begin Contact descript*****************************-->
+    <section class="container contact-wrap">
+        <div class="row">
+            <div class="col-md-6 get-in-touch">
+                <h2 class="section-title">Any Questions<span class="blue-text">Contact Us</span></h2>
+                <p class="simple-text-12"><strong>Lorem ipsum dolor sit amet</strong>Consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
+                <address>
+                    <span class="widget-news-phone">+ 00 0000 000 000 / + 00 0000 000 000</span>
+                    <span class="widget-news-email">Sales@ejjada.com</span>
+                    <span class="widget-news-address">1703 SIT Towers, Dubai, UAE</span>
+                </address>
+            </div>
+            @*<div class="col-md-6">
+                <form class="border-double messege-form text-center" method="post">
+                    <fieldset>
+                        <div class="control-group col-md-6">
+                            <label class="control-label" for="name">Name:</label>
+                            <div class="controls">
+                                <input type="text" class="form-control pull-left" id="name" name="name" data-val="true" data-val-required="*">
+                                <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="control-group col-md-6">
+                            <label class="control-label" for="email">Email:</label>
+                            <div class="controls">
+                                <input type="text" class="form-control pull-right" id="email" name="email" data-val="true" data-val-required="*" data-val-email="Not Valid">
+                                <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="control-group col-md-6">
+                            <label class="control-label" for="phone">Phone:</label>
+                            <div class="controls">
+                                <input type="text" class="form-control pull-left" id="phone" name="phone" data-val="true" data-val-required="*">
+                                <span class="field-validation-valid" data-valmsg-for="phone" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="control-group col-md-6">
+                            <label class="control-label" for="title">Title:</label>
+                            <div class="controls">
+                                <input type="text" class="form-control pull-right" id="title" name="title" data-val="true" data-val-required="*">
+                                <span class="field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="message">Message:</label>
+                            <div class="controls">
+                                <textarea class="form-control" id="message" rows="5" name="message" data-val="true" data-val-required="*"></textarea>
+                                <span class="field-validation-valid" data-valmsg-for="message" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <a class="btn btn-info btn-large" id="submit">Send Us Message</a>
+                        <input type="submit" class="btn btn-info btn-large" name="submit-btn" id="submit-btn" value="Send Us Message">
+                        @if (ViewBag.MailSent != null && ViewBag.MailSent)
+                        {
+                            <div>Mail Sent!</div>
+                        }
+                    </fieldset>
+
+                    </form>
+            </div>*@
+        </div>
+    </section>
+</div> <!--**************************End Project descript*****************************-->

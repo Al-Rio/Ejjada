@@ -1,0 +1,164 @@
+﻿@model Ejjada.Controllers.HomeController.maz
+
+@{
+    ViewBag.Title = "Services";
+}
+
+<!--**************************Begin Call to action*****************************-->
+<section class="action-area-mini">
+    <div class="foto-service">
+        <div class="container">
+            <h2 class="page-title pull-left page-title-margin">client<small>Services</small></h2>
+            <ul class="ch-second-grid">
+                <li class="pull-right download-button">
+                    <div class="ch-second-item">
+                        <h4>إجادة</h4>
+                        <a class="ch-second-info">
+                            <h4>لخدمات تنظيف المباني</h4>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section><!--**************************End Call to action*****************************-->
+<div class="white-wrap">
+    <div class="container grey-lines page-content">
+        <div class="row">
+        </div>
+        <div class="row service-descript-wrap">
+            <div class="col-md-8">
+                @foreach (var item in Model.ServiceDiscript)
+                { 
+                <p class="simple-text-14"><strong>@item.Discription</strong></p>
+                }
+            </div>
+            <div class="col-md-4 question-info">
+                <h2 class="primary section-title">Have any<span class="custom-size">Questions?</span></h2>
+                <p class="simple-text-12">Aliquam scelerisque tincidunt risus nec pellentesque. Cum sociis natoque penatibus et magnis dis parturient montes. <strong>Any time, toll free</strong></p>
+                <p class="blue-text upper font-style-26">support@ejjada.com</p>
+                <p class="simple-text-16">or</p>
+                <p class="blue-text font-style-26">0-000-000-000-000</p>
+            </div>
+        </div>
+    </div>
+    <section class="container grey-lines available-services">
+        <h2 class="section-title">Available<span class="blue-text">Services</span></h2>
+        <ul class="service-list bxslider">
+            @foreach (var item in Model.CService)
+                {
+                <li class="text-left">
+                    <div class="bxslider-active text-center">
+                        <div class="bxslider-li-wrap">
+                            <span class="quick-support-icon"></span>
+                            <h3>Aircraft Cleaning</h3>
+                        </div>
+                    </div>
+                    <p class="simple-text-14"><strong>@item.Service1</strong> </p>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="text-right">
+                    <div class="bxslider-active text-center">
+                        <div class="bxslider-li-wrap">
+                            <span class="cloud-computing-icon"></span>
+                            <h3>Cradle Access</h3>
+                        </div>
+                    </div>
+                    <p class="simple-text-14"><strong>@item.Service3</strong></p>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="text-left">
+                    <div class="bxslider-active text-center">
+                        <div class="bxslider-li-wrap">
+                            <span class="multiple-users-icon"></span>
+                            <h3>Rope Access</h3>
+                        </div>
+                    </div>
+                    <p class="simple-text-14"><strong>@item.Service2</strong>
+                    </p>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="text-right">
+                    <div class="bxslider-active text-center">
+                        <div class="bxslider-li-wrap">
+                            <span class="quick-support-icon"></span>
+                            <h3>Ship Cleaning</h3>
+                        </div>
+                    </div>
+                    <p class="simple-text-14"><strong>@item.Service5</strong></p>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="text-left">
+                    <div class="bxslider-active text-center">
+                        <div class="bxslider-li-wrap">
+                            <span class="investment-program-icon"></span>
+                            <h3>Construction Cleaning</h3>
+                        </div>
+                    </div>
+                    <p class="simple-text-14"><strong>@item.Service6</strong></p>
+                    <div class="clearfix"></div>
+                </li>
+                 <li class="text-right">
+                    <div class="bxslider-active text-center">
+                        <div class="bxslider-li-wrap">
+                            <span class="cost-reduction-icon"></span>
+                            <h3>Road Sign Cleaning</h3>
+                        </div>
+                    </div>
+                    <p class="simple-text-14"><strong>@item.Service4</strong></p>
+                    <div class="clearfix"></div>
+                </li>
+            }
+            </ul>
+        </section>
+                <section class="container recently-wrap">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2 class="section-title">Our<span class="blue-text">Client</span></h2>
+                            <ul class="client-say-slider">
+                                <li>
+                                    <div class="client-photo-wrap pull-left">
+                                        <figure class="client-photo">
+                                            <img src="~/Content/Tem/img/client-photo-1.jpg" alt="client-photo-1">
+                                            <figcaption>Rio</figcaption>
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="client-photo-wrap pull-left">
+                                        <figure class="client-photo">
+                                            <img src="~/Content/Tem/img/client-photo-2.jpg" alt="client-photo-2">
+                                            <figcaption>Clarck Kent</figcaption>
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="client-photo-wrap pull-left">
+                                        <figure class="client-photo">
+                                            <img src="~/Content/Tem/img/client-photo-3.jpg" alt="client-photo-3">
+                                            <figcaption>Barbara Lee</figcaption>
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="client-photo-wrap pull-left">
+                                        <figure class="client-photo">
+                                            <img src="~/Content/Tem/img/client-photo-5.jpg" alt="client-photo-5">
+                                            <figcaption>Santsa Sky</figcaption>
+                                        </figure>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="grey-block-wrap">
+                                <div class="grey-block question-wrap text-center">
+                                    <h4 class="font-style-20 bold upper">Have any questions?</h4>
+                                    <p class="simple-text-12">Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper.</p>
+                                    <a href="/Home/Contact" class="btn btn-info btn-large-maxi">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>

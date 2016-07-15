@@ -1,0 +1,71 @@
+﻿@model Ejjada.Models.Why
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Why</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyTitle1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyTitle1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyBody1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyBody1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyTitle2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyTitle2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyBody2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyBody2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyTitle3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyTitle3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyBody3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyBody3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyTitle4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyTitle4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WhyBody4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhyBody4)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

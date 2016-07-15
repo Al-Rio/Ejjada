@@ -1,0 +1,307 @@
+﻿@model Ejjada.Controllers.HomeController.maz
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@section scripts{
+    <script>
+        //Bxslider Slider
+        $('.bxslider').bxSlider({
+            pager: false,
+            minSlides: 2,
+            maxSlides: 4,
+            slideWidth: 270,
+            slideMargin: 30
+        });
+    </script>
+    <script>
+        $('.bxslider').children().on("mouseenter", function (e) {
+            $('.bxslider').children().removeClass("bxslider-active");
+            $('.bxslider-description').children().removeClass("description-active");
+            var number = parseInt($(this).addClass("bxslider-active").data('order'));
+            $('.bxslider-description').children().eq(--number).addClass("description-active");
+        });
+    </script>
+}
+<section class="container-full">
+    <div class="container-full">
+        <!-- slider start -->
+        <div id="slidingcarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/Content/Tem/slider-img/plane-bg.jpg" alt="Aircraft" class="img-responsive" />
+                    <div class="carousel-caption">
+                        <h1 class="pull-right">Aircraft Cleaning!</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/Content/Tem/slider-img/building-bg.jpg" alt="building" class="img-responsive" />
+                    <div class="carousel-caption">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rope Access!</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/Content/Tem/slider-img/road-bg.jpg" alt="Road" class="img-responsive" />
+                    <div class="carousel-caption">
+                        <h1 class="pull-right">Road Sign Cleaning!</h1>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control left" href="#slidingcarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="carousel-control right" href="#slidingcarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+        <!--slider end -->
+    </div>
+</section>
+<div class="white-wrap">
+    <!--**************************Begin Benefits*****************************-->
+    <section class="container benefits-wrap grey-lines">
+        <div class="row">
+            <div class="col-xs-7 benefits">
+                <h2 class="section-title">Service<span class="blue-text">Benefits</span></h2>
+                @foreach (var item in Model.CBenefit)
+                {
+                    <ul class="camera_pag_ul">
+                        <li class="pag_nav_0 simple-text-14"><strong>@item.Benefit1</strong></li>
+                    </ul>
+                }
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1 ">
+                <ul class="phoneCarousel" id="phoneCarousel">
+                    <li>
+                        <img src="~/Content/Tem/img/iPhone-blue.png" alt="carousel-img1" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="~/Content/Tem/img/iPhone-pink.png" alt="carousel-img2" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="~/Content/Tem/img/iPhone-dark.png" alt="carousel-img3" class="img-responsive">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--**************************End Benefits*****************************-->
+    <!--**************************Begin Services*****************************-->
+    <div class="services-wrap horizontal-blue-lines">
+        <section class="container services">
+            <h2 class="section-title">Available<span class="blue-text">Services</span></h2>
+            <ul class="bxslider">
+                <li class="bxslider-active text-center" data-order="1">
+                    <div class="bxslider-li-wrap">
+                        <span class="quick-support-icon"></span>
+                        <h3>Aircraft Cleaning</h3>
+                    </div>
+                </li>
+                <li class="text-center" data-order="2">
+                    <div class="bxslider-li-wrap">
+                        <span class="multiple-users-icon"></span>
+                        <h3>Rope Access</h3>
+                    </div>
+                </li>
+                <li class="text-center" data-order="3">
+                    <div class="bxslider-li-wrap">
+                        <span class="cloud-computing-icon"></span>
+                        <h3>Cradle</h3>
+                    </div>
+                </li>
+                <li class="text-center" data-order="4">
+                    <div class="bxslider-li-wrap">
+                        <span class="cost-reduction-icon"></span>
+                        <h3>Road Sign Cleaning</h3>
+                    </div>
+                </li>
+                <li class="text-center" data-order="5">
+                    <div class="bxslider-li-wrap">
+                        <span class="quick-support-icon"></span>
+                        <h3>Ship Cleaning</h3>
+                    </div>
+                </li>
+                <li class="text-center" data-order="6">
+                    <div class="bxslider-li-wrap">
+                        <span class="multiple-users-icon"></span>
+                        <h3>Construction Cleaning</h3>
+                    </div>
+                </li>
+            </ul>
+            <ul class="bxslider-description">
+                @foreach (var item in Model.CService)
+                {
+                    <li class="description-active">
+                        <p class="simple-text-14"><strong>@item.Service1</strong></p>
+                    </li>
+                    <li>
+                        <p class="simple-text-14"><strong>@item.Service2</strong></p>
+                    </li>
+                    <li>
+                        <p class="simple-text-14"><strong>@item.Service3</strong></p>
+                    </li>
+                    <li>
+                        <p class="simple-text-14"><strong>@item.Service4</strong></p>
+                    </li>
+                    <li>
+                        <p class="simple-text-14"><strong>@item.Service5</strong></p>
+                    </li>
+                    <li>
+                        <p class="simple-text-14"><strong>@item.Service6</strong></p>
+                    </li>
+                }
+            </ul>
+        </section>
+    </div>
+    <!--**************************End Services*****************************-->
+    <div class="container grey-lines empty-block visible-phone"></div>
+    <!--**************************Begin Universe*****************************-->
+    <div class="universe-border-wrap hidden-xs">
+        <div class="universe-wrap">
+            <div class="pattern-wrap">
+                <div class="lines-wrap horizontal-grey-lines">
+                    <section class="container universe">
+                        <h2 class="section-title pull-left">Welcome to<span>&nbsp;&nbsp;EJJADA</span></h2>
+                        <ul class="ch-second-grid">
+                            <li>
+                                <div class="ch-second-item">
+                                    <h4>Clean</h4>
+                                    <a class="ch-second-info">
+                                        <h4>Clean</h4>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ch-second-item">
+                                    <h4>Shining</h4>
+                                    <a class="ch-second-info">
+                                        <h4>Shining</h4>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ch-second-item">
+                                    <h4>Reliable</h4>
+                                    <a class="ch-second-info">
+                                        <h4>Reliable</h4>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--**************************End Universe*****************************-->
+    <!--**************************Begin Client-say*****************************-->
+    <section class="container client-say grey-lines">
+        <h2 class="section-title">Our<span class="blue-text">Clients</span></h2>
+        <ul class="client-say-slider">
+            <li>
+                <div class="client-photo-wrap pull-left">
+                    <figure class="client-photo">
+                        <img src="~/Content/Tem/img/client-photo-1.jpg" alt="client-photo-1" class="img-responsive">
+                        <figcaption>John Doe</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <div class="client-photo-wrap pull-left">
+                    <figure class="client-photo">
+                        <img src="~/Content/Tem/img/client-photo-2.jpg" alt="client-photo-2" class="img-responsive">
+                        <figcaption>Clarck Kent</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <div class="client-photo-wrap pull-left">
+                    <figure class="client-photo">
+                        <img src="~/Content/Tem/img/client-photo-3.jpg" alt="client-photo-3" class="img-responsive">
+                        <figcaption>Barbara Lee</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <div class="client-photo-wrap pull-left">
+                    <figure class="client-photo">
+                        <img src="~/Content/Tem/img/client-photo-5.jpg" alt="client-photo-5" class="img-responsive">
+                        <figcaption>Santsa Sky</figcaption>
+                    </figure>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--**************************End Client-say*****************************-->
+    <!--**************************Begin Why choose us*****************************-->
+    <section class="container posts-choose-wrap grey-lines">
+        <!--<span class="grey-vertical-line hidden-xs"></span>-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="choose-ejjada-wrap">
+                    <h2 class="article-title">Why choose<span>Ejjada?</span></h2>
+                    <div class="panel-group" id="accordion">
+                        @foreach (var item in Model.Why)
+                        {
+                            <div class="panel panel-default">
+                                <div class="accordion-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle accordion-plus" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            @item.WhyTitle1
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        @item.WhyBody1
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="accordion-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle accordion-plus" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            @item.WhyTitle2
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                       @item.WhyBody2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="accordion-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle accordion-plus" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            @item.WhyTitle3
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        @item.WhyBody3
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="accordion-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle accordion-plus" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            @item.WhyTitle4
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        @item.WhyBody4
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--**************************End Posts & Why choose*****************************-->
+
+    </div>

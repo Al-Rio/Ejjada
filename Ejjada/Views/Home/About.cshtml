@@ -1,0 +1,101 @@
+﻿@model Ejjada.Controllers.HomeController.maz
+
+@{
+    ViewBag.Title = "About Us";
+}
+<!--**************************Begin Call to action*****************************-->
+<section class="action-area-mini">
+    <div class="foto-about">
+        <div class="container">
+            <h2 class="page-title pull-left page-title-margin">About<small>&nbsp; إجــادة </small></h2>
+            <ul class="ch-second-grid">
+                <li class="pull-right download-button">
+                    <div class="ch-second-item">
+                        <h4>Call us<br /><span class="download-button-arrow"></span></h4>
+                        <a href="/Home/Contact" class="ch-second-info">
+                            <h4>Here<br /><span class="download-button-arrow"></span></h4>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section><!--**************************End Call to action*****************************-->
+<div class="white-wrap">
+    <section class="container about-page-content grey-lines">
+        @foreach (var item in Model.AboutDiscript)
+        { 
+        <p class="simple-text-14"><strong>@item.Discription1</strong></p>
+        }
+            </section>
+    <section class="container grey-lines empty-block"></section>
+    <section class="container services grey-lines">
+        <h2 class="section-title">Ejjada<span class="blue-text">Team</span></h2>
+        <ul class="ejjada-team">
+            <li class="text-center">
+                <div class="author-post-photo-wrap">
+                    <img src="~/Content/Tem/img/ejjada-team-photo-1.jpg" alt="Photo 1" class="author-post-photo">
+                    <a href="#" class="mask"></a>
+                    <div class="holder-author-photo"></div>
+                </div>
+                <div class="author-info border-triangle">
+                    <h4 class="simple-text-16 bold"><a href="#" class="link">Super Cat</a></h4>
+                    <h5 class="simple-text-12 light-grey-text">Developer</h5>
+                    <p class="simple-text-12">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed consequat, nisl nec ultricies bibendum, lectus leo tincidunt enim, vel convallis magna felis a diam. </p>
+                    <ul class="social clearfix">
+                        <li><a href="#" class="pinterest-icon"></a></li>
+                        <li><a href="#" class="google-icon"></a></li>
+                        <li><a href="#" class="linkedin-icon"></a></li>
+                        <li><a href="#" class="twitter-icon"></a></li>
+                        <li><a href="#" class="facebook-icon"></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="text-center">
+                <div class="author-post-photo-wrap">
+                    <img src="~/Content/Tem/img/ejjada-team-photo-3.jpg" alt="Photo 3" class="author-post-photo">
+                    <a href="#" class="mask"></a>
+                    <div class="holder-author-photo"></div>
+                </div>
+                <div class="author-info border-triangle">
+                    <h4 class="simple-text-16 bold"><a href="#" class="link">Lane Tomson</a></h4>
+                    <h5 class="simple-text-12 light-grey-text">Designer</h5>
+                    <p class="simple-text-12">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed consequat, nisl nec ultricies bibendum, lectus leo tincidunt enim, vel convallis magna felis a diam. </p>
+                    <ul class="social clearfix">
+                        <li><a href="#" class="google-icon"></a></li>
+                        <li><a href="#" class="linkedin-icon"></a></li>
+                        <li><a href="#" class="twitter-icon"></a></li>
+                        <li><a href="#" class="facebook-icon"></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="text-center">
+                <div class="author-post-photo-wrap">
+                    <img src="~/Content/Tem/img/ejjada-team-photo-4.jpg" alt="Photo 4" class="author-post-photo">
+                    <a href="#" class="mask"></a>
+                    <div class="holder-author-photo"></div>
+                </div>
+                <div class="author-info border-triangle">
+                    <h4 class="simple-text-16 bold"><a href="#" class="link">Mark Queen</a></h4>
+                    <h5 class="simple-text-12 light-grey-text">Web Developer</h5>
+                    <p class="simple-text-12">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed consequat, nisl nec ultricies bibendum, lectus leo tincidunt enim, vel convallis magna felis a diam. </p>
+                    <ul class="social clearfix">
+                        <li><a href="#" class="google-icon"></a></li>
+                        <li><a href="#" class="linkedin-icon"></a></li>
+                        <li><a href="#" class="twitter-icon"></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="container about-contact">
+        <div class="row">
+            <div class="col-md-9">
+                <p class="simple-text-14"><strong>Fusce aliquet euismod luctus.</strong> Aliquam scelerisque tincidunt risus nec pellentesque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.  Pellentesque mattis nisl eget neque scelerisque adipiscing.</p>
+            </div>
+            <div class="col-md-3">
+                <a href="/Home/Contact" class="btn btn-info btn-large">Contact Us</a>
+            </div>
+        </div>
+    </section>
+</div>

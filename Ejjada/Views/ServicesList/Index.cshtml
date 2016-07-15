@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Ejjada.Models.CService>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h3>&nbsp;</h3>
+<h2 class="container">(Available Services)</h2>
+<h3>&nbsp;</h3>
+@*<p>
+    <h3 class="btn btn-block btn-primary">
+        @Html.ActionLink("Create New", "Create")
+        </h3>
+</p>*@
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Service1)
+        </th>
+    </tr>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Service1)
+                <h3>&nbsp;</h3>
+            </td>
+            <td class="btn btn-primary">
+                |   @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |<h3>&nbsp;</h3>
+                |  @Html.ActionLink("Details", "Details", new { id = item.Id }) |<h3>&nbsp;</h3>
+                |  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |<h3>&nbsp;</h3>
+            </td>
+        </tr>
+    }
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Service2)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Service2)
+                    <h3>&nbsp;</h3>
+                </td>
+                <td class="btn btn-primary">
+                    |   @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |<h3>&nbsp;</h3>
+                    |  @Html.ActionLink("Details", "Details", new { id = item.Id }) |<h3>&nbsp;</h3>
+                    |  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |<h3>&nbsp;</h3>
+                </td>
+            </tr>
+        }
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Service3)
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Service3)
+                        <h3>&nbsp;</h3>
+                    </td>
+                    <td class="btn btn-primary">
+                        |   @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |<h3>&nbsp;</h3>
+                        |  @Html.ActionLink("Details", "Details", new { id = item.Id }) |<h3>&nbsp;</h3>
+                        |  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |<h3>&nbsp;</h3>
+                    </td>
+                </tr>
+            }
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Service4)
+                    </th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Service4)
+                            <h3>&nbsp;</h3>
+                        </td>
+                        <td class="btn btn-primary">
+                            |   @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |<h3>&nbsp;</h3>
+                            |  @Html.ActionLink("Details", "Details", new { id = item.Id }) |<h3>&nbsp;</h3>
+                            |  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |<h3>&nbsp;</h3>
+                        </td>
+                    </tr>
+                }
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Service5)
+                        </th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Service5)
+                                <h3>&nbsp;</h3>
+                            </td>
+                            <td class="btn btn-primary">
+                                |   @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |<h3>&nbsp;</h3>
+                                |  @Html.ActionLink("Details", "Details", new { id = item.Id }) |<h3>&nbsp;</h3>
+                                |  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |<h3>&nbsp;</h3>
+                            </td>
+                        </tr>
+                    }
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Service6)
+                            </th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Service6)
+                                    <h3>&nbsp;</h3>
+                                </td>
+                                <td class="btn btn-primary">
+                                    |   @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |<h3>&nbsp;</h3>
+                                    |  @Html.ActionLink("Details", "Details", new { id = item.Id }) |<h3>&nbsp;</h3>
+                                    |  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |<h3>&nbsp;</h3>
+                                </td>
+                            </tr>
+                        }
+                        
+                    </table>
+<div>
+    <h3 class="btn btn-block btn-primary" >
+        @Html.ActionLink("Back", "Index", "SuperAdmin")
+    </h3>
+</div>
